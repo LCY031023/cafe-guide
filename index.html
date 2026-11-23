@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>咖啡廳圖鑑｜Cafe Guide</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html">
+        <span class="brand-title">咖啡廳圖鑑</span>
+        <span class="brand-sub">Cafe Guide</span>
+      </a>
+    </div>
+  </header>
+
+  <section class="hero-section">
+    <p class="hero-eyebrow">Curated Coffee Archive</p>
+    <h1 class="hero-title">咖啡廳圖鑑</h1>
+    <p class="hero-desc">
+      收錄各地具空間美學與風味特色的咖啡館。<br>
+      以淺米色標記待訪清單，以深焙咖色記錄已走訪足跡。
+    </p>
+    <div class="legend-bar">
+      <span class="legend-item">
+        <span class="legend-dot wishlist"></span>想去清單（淺米色）
+      </span>
+      <span class="legend-item">
+        <span class="legend-dot visited"></span>已造訪（深焙咖）
+      </span>
+    </div>
+  </section>
+
+  <section class="filter-container" aria-label="咖啡廳篩選器">
+    <div class="filter-panel">
+      <div class="filter-row">
+        <span class="filter-label">造訪狀態</span>
+        <div class="filter-buttons">
+          <button type="button" class="filter-btn active" data-filter-status="all">全部狀態</button>
+          <button type="button" class="filter-btn" data-filter-status="wishlist">想去</button>
+          <button type="button" class="filter-btn" data-filter-status="visited">已造訪</button>
+        </div>
+      </div>
+
+      <hr class="filter-divider">
+
+      <div class="filter-row">
+        <span class="filter-label">所在區域</span>
+        <div class="filter-buttons">
+          <button type="button" class="filter-btn active" data-filter-region="all">全部地區</button>
+          <button type="button" class="filter-btn" data-filter-region="north">北部</button>
+          <button type="button" class="filter-btn" data-filter-region="central">中部</button>
+          <button type="button" class="filter-btn" data-filter-region="south">南部</button>
+          <button type="button" class="filter-btn" data-filter-region="east">東部</button>
+        </div>
+      </div>
+
+      <div class="filter-row" id="city-filter-group" hidden>
+        <span class="filter-label">細分縣市</span>
+        <div class="filter-buttons" id="city-buttons"></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="main-container">
+    <div class="cafe-grid">
+      <!-- 已造訪（深焙咖啡色） -->
+      <article class="cafe-card" data-status="visited" data-region="central" data-city="台中">
+        <a href="cafes/jing-chu-xun.html">
+          <div class="cover-box visited">
+            <span class="status-badge visited">✓ 已造訪</span>
+            <span class="cover-en">JING CHU XUN</span>
+            <h2 class="cover-zh">憬初尋</h2>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">中部 · 台中</div>
+            <p class="card-summary">隱身豐原巷弄的老宅自家烘焙咖啡廳，保留木質窗框與靜謐氛圍，主打手沖單品與手作甜點。</p>
+            <div class="tag-list">
+              <span class="tag-pill">#老宅改建</span>
+              <span class="tag-pill">#自家烘焙</span>
+              <span class="tag-pill">#手作甜點</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <!-- 想去清單（燕麥米色） -->
+      <article class="cafe-card" data-status="wishlist" data-region="central" data-city="台中">
+        <a href="cafes/foam-cat-cafe.html">
+          <div class="cover-box wishlist">
+            <span class="status-badge wishlist">想去</span>
+            <span class="cover-en">FOAM CAT CAFE</span>
+            <h2 class="cover-zh">奶泡貓咖啡</h2>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">中部 · 台中</div>
+            <p class="card-summary">以原創角色奶泡貓為主題的療癒系咖啡廳，結合暖木色調空間與立體造型拉花飲品。</p>
+            <div class="tag-list">
+              <span class="tag-pill">#主題咖啡廳</span>
+              <span class="tag-pill">#造型拉花</span>
+              <span class="tag-pill">#特色甜點</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <article class="cafe-card" data-status="wishlist" data-region="central" data-city="南投">
+        <a href="cafes/laifuju-glass-house.html">
+          <div class="cover-box wishlist">
+            <span class="status-badge wishlist">想去</span>
+            <span class="cover-en">LAIFUJU GLASS HOUSE</span>
+            <h2 class="cover-zh">來福居玻璃屋</h2>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">中部 · 南投</div>
+            <p class="card-summary">坐落清境山區的歐風景觀玻璃屋咖啡館，擁有開闊山巒視野與明亮採光，適合悠閒午茶。</p>
+            <div class="tag-list">
+              <span class="tag-pill">#景觀玻璃屋</span>
+              <span class="tag-pill">#山景視野</span>
+              <span class="tag-pill">#午後茶點</span>
+            </div>
+          </div>
+        </a>
+      </article>
+    </div>
+
+    <div class="empty-state" id="empty-state" hidden>
+      目前此篩選條件下尚無收錄的咖啡廳，隨時可依 AGENTS.md 規範新增！
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    咖啡廳圖鑑 Cafe Guide — 依照 AGENTS.md 規範建置與維護
+  </footer>
+
+  <script src="js/filter.js"></script>
+</body>
+</html>
